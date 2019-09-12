@@ -6,6 +6,8 @@ package physics
   */
 object PhysicsEngine {
 
-  def updateWorld(world: World, dt: Double): Unit = {}
+  def updateWorld(world: World, dt: Double): Unit = {
+    world.dynamicObjects.head.location.z = (4.0)
+  }
 
 }
