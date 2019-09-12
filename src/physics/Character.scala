@@ -22,7 +22,7 @@ class Character {
     }
   }
 
-  def physicalAttack(player1: Character): Unit = {
+  def physicalAttack(): Unit = {
     var damage: Int = 0
     if (attackPower > this.defense){
       damage = attackPower - this.defense
@@ -30,12 +30,16 @@ class Character {
     }
   }
 
-  def magicAttack(player2: Character): Unit = {
+  def mageAttack(): Unit = {
     var damage2: Int = 0
     if (magicAttack > this.magicDefense){
       damage2 = magicAttack - this.defense
-      takeDamage(damage2)
 
+      takeDamage(damage2)
+    }
+    if (magicAttack < this.magicDefense){
+      damage2 = 0
+      takeDamage(damage2)
     }
   }
 

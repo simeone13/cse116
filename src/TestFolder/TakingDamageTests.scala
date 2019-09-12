@@ -28,8 +28,6 @@ class TakingDamageTests extends FunSuite {
       character3.dead
     }
 
-    def
-
   }
 
 }
