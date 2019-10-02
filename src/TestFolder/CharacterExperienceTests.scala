@@ -1,13 +1,13 @@
 package TestFolder
 
 import org.scalatest._
-import physics.Character
+import physics.BaseCharacter
 
 class CharacterExperienceTests extends FunSuite {
   test("Tests XP") {
-    val characterA: Character = new Character
-    val characterB: Character = new Character
-    val characterC: Character = new Character
+    val characterA: BaseCharacter = new BaseCharacter
+    val characterB: BaseCharacter = new BaseCharacter
+    val characterC: BaseCharacter = new BaseCharacter
 
     characterA.gainXP(50) // character gains XP
     assert(characterA.currentXp == 50) // checks if gained XP is store in currentXP

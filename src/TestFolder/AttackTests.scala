@@ -1,12 +1,12 @@
 package TestFolder
 
 import org.scalatest._
-import physics.Character
+import physics.BaseCharacter
 
 class AttackTests extends FunSuite{
   test("AttackP") {
-    val characterA: Character = new Character
-    val characterB: Character = new Character
+    val characterA: BaseCharacter = new BaseCharacter
+    val characterB: BaseCharacter = new BaseCharacter
 
     characterA.physicalAttack(characterA, characterB)
     assert(characterB.currentHP == 90) //attack > def
@@ -22,8 +22,8 @@ class AttackTests extends FunSuite{
   }
 
   test("AttackM") {
-    val characterA: Character = new Character
-    val characterB: Character = new Character
+    val characterA: BaseCharacter = new BaseCharacter
+    val characterB: BaseCharacter = new BaseCharacter
 
     characterA.mageAttack(characterA, characterB)
     assert(characterA.currentMP == 90) // magic atk cost 10

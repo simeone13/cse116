@@ -1,10 +1,10 @@
 package physics.objects
 
-import physics.Character
+import physics.BaseCharacter
 
 class Party {
 
-  var chars: List[Character] = List() //list of characters in party
+  var chars: List[BaseCharacter] = List() //list of characters in party
 
   def defeatedParty(deadParty: Party): Unit = {
     var xp: Int = 0
@@ -14,8 +14,10 @@ class Party {
     }
 
     for (character <- chars) { //goes through the Winner party and gives them XP depending if they are dead or alive
-      if (character.dead == false) { //if a character is not dead they will get XP
+      if (character.dead == false) {//if a character is not dead they will get XP
         character.currentXp += (xp / chars.size) //gives XP based on the number of alive characters
+      } else {
+        character.currentXp = 0
       }
     }
   }

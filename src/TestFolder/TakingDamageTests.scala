@@ -1,13 +1,13 @@
 package TestFolder
 
 import org.scalatest._
-import physics.Character
+import physics.BaseCharacter
 
 class TakingDamageTests extends FunSuite {
   test("Tests Function") {
-    val character1: Character = new Character
-    val character2: Character = new Character
-    val character3: Character = new Character
+    val character1: BaseCharacter = new BaseCharacter
+    val character2: BaseCharacter = new BaseCharacter
+    val character3: BaseCharacter = new BaseCharacter
     assert(aliveTest() == false)
     assert(nonLethal() == 80)
     assert(lethal() == true)
